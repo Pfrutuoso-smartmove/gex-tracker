@@ -1,6 +1,8 @@
 # Gamma Exposure Tracker
 Python script to scrape option data from CBOE website and track current dealers' notional gamma exposure (GEX).
 
+https://cdn.cboe.com/api/global/delayed_quotes/options/_SPX.json
+
 To calculate the total exposure we assume that dealers are long calls and short puts, hence:
 * Call gamma = spot price * gamma * open interest * contract size * spot price * 0.01
 * Put gamma = - spot price * gamma * open interest * contract size * spot price * 0.01

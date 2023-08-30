@@ -116,15 +116,15 @@ def compute_gex_by_expiration(data):
     plt.bar(
         gex_by_expiration.index,
         gex_by_expiration.values,
-        color="#FE53BB",
+        color="#0E4C92",
         alpha=0.5,
     )
-    plt.grid(color="#2A3459")
-    plt.xticks(rotation=45, fontweight="heavy")
+    plt.grid(color="#fff")
+    plt.xticks(rotation=45, fontweight="heavy", color="#2A3459")
     plt.yticks(fontweight="heavy")
-    plt.xlabel("Expiration date", fontweight="heavy")
-    plt.ylabel("Gamma Exposure (Bn$ / %)", fontweight="heavy")
-    plt.title(f"{ticker} GEX by expiration", fontweight="heavy")
+    plt.xlabel("Expiration date", fontweight="heavy", color="#2A3459")
+    plt.ylabel("Gamma Exposure (Bn$ / %)", fontweight="heavy", color="#2A3459")
+    plt.title(f"{ticker} GEX by expiration", fontweight="heavy", color="#2A3459")
     plt.show()
 
 
@@ -153,9 +153,9 @@ def print_gex_surface(spot, data):
         cmap="seismic_r",
     )
     ax.yaxis.set_major_formatter(dates.AutoDateFormatter(ax.xaxis.get_major_locator()))
-    ax.set_ylabel("Expiration date", fontweight="heavy")
-    ax.set_xlabel("Strike Price", fontweight="heavy")
-    ax.set_zlabel("Gamma (M$ / %)", fontweight="heavy")
+    ax.set_ylabel("Expiration date", fontweight="heavy", color="#2A3459")
+    ax.set_xlabel("Strike Price", fontweight="heavy", color="#2A3459")
+    ax.set_zlabel("Gamma (M$ / %)", fontweight="heavy", color="#2A3459")
     plt.show()
 
 
